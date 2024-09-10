@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-const boxes = document.querySelectorAll('#boxes .box','.service','#about, #history');
+const boxes = document.querySelectorAll('#boxes .box , .service, #about, #history');
 boxes.forEach((box, index) => {
 	setTimeout(() => {
 		box.style.opacity = 0;
