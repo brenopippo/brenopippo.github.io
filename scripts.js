@@ -1,14 +1,5 @@
-const showcaseText = document.querySelector('#showcase h1');
-showcaseText.style.opacity = 0;
-showcaseText.style.transform = 'translateY(-20px)';
-showcaseText.style.transition = 'opacity 1s, transform 1s';
-setTimeout(() => {
-	showcaseText.style.opacity = 1;
-	showcaseText.style.transform = 'translateY(0)';
-}, 300);
-
 document.addEventListener('DOMContentLoaded', (event) => {
-const boxes = document.querySelectorAll('#boxes .box , .service, #about, #history');
+const boxes = document.querySelectorAll('#boxes .box , .service, #about, #history,#showcase h1,#showcase hp');
 boxes.forEach((box, index) => {
 	setTimeout(() => {
 		box.style.opacity = 0;
