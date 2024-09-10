@@ -1,3 +1,12 @@
+const showcaseText = document.querySelector('#showcase h1');
+showcaseText.style.opacity = 0;
+showcaseText.style.transform = 'translateY(-20px)';
+showcaseText.style.transition = 'opacity 1s, transform 1s';
+setTimeout(() => {
+	showcaseText.style.opacity = 1;
+	showcaseText.style.transform = 'translateY(0)';
+}, 300);
+
 document.addEventListener('DOMContentLoaded', (event) => {
 const boxes = document.querySelectorAll('#boxes .box , .service, #about, #history');
 boxes.forEach((box, index) => {
@@ -8,18 +17,9 @@ boxes.forEach((box, index) => {
 		setTimeout(() => {
 			box.style.opacity = 1;
 			box.style.transform = 'translateY(0)';
-		}, index * 200);
+		}, ( index + 1 )* 200);
 	}, 500);
 });
-
-const showcaseText = document.querySelector('#showcase h1');
-showcaseText.style.opacity = 0;
-showcaseText.style.transform = 'translateY(-20px)';
-showcaseText.style.transition = 'opacity 1s, transform 1s';
-setTimeout(() => {
-	showcaseText.style.opacity = 1;
-	showcaseText.style.transform = 'translateY(0)';
-}, 300);
 
 const form = document.getElementById('contact');
 form.addEventListener('submit', (e) => {
